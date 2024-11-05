@@ -66,7 +66,7 @@ body {
     padding: 2rem;
 }
 
-/* 지도 스타일 */
+
 .map-section {
     flex: 2;
     height: 600px;
@@ -76,7 +76,7 @@ body {
     overflow: hidden;
 }
 
-/* 추천 세차장 리스트 스타일 */
+
 .recommend-section {
     flex: 1;
     background-color: #fff;
@@ -144,11 +144,11 @@ body {
 }
 
 .info-window.available {
-    background-color: #d4edda; /* 초록색 */
+    background-color: #d4edda; 
 }
 
 .info-window.unavailable {
-    background-color: #f8d7da; /* 빨간색 */
+    background-color: #f8d7da; 
 }
 .map-section {
     flex: 1;
@@ -177,7 +177,7 @@ body {
     color: #666;
 }
 
-/* 추천 리스트 항목 스타일 */
+
 .recommend-item {
     padding: 10px;
     border-bottom: 1px solid #eaeaea;
@@ -217,4 +217,41 @@ body {
 
 .reserve-button:hover {
     background-color: #0056b3;
+}
+
+.reserve-button.available {
+    background-color: #28a745; 
+    color: #fff;
+}
+
+.reserve-button.unavailable {
+    background-color: #dc3545; 
+    color: #fff;
+}
+
+
+.info-window.available {
+    background-color: #d4edda; 
+    border: 1px solid #28a745;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-window.unavailable {
+    background-color: #f8d7da; 
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-address, .info-phone, .info-slots {
+    font-size: 14px;
+    color: #666;
 }
