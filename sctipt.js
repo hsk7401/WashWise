@@ -89,7 +89,6 @@ function toggleTimeSelection() {
     renderCalendar();
 }
 
-
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape" && reservationModal.style.display === "block") {
         reservationModal.style.display = "none";
