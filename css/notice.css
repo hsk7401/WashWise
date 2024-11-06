@@ -1,0 +1,259 @@
+.idder {
+    width: 1100px;
+    margin: 0 auto;
+    min-width: 320px;
+    position: relative;
+}
+
+.place {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cf {
+    color: black;
+}
+
+.tit {
+    display: block;
+    text-align: center;
+    width: 380px;
+    height: 50px;
+    margin: 25px 0 2px;
+}
+
+.list {
+    margin-bottom: 30px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+}
+
+#container > div {
+    margin-bottom: 120px;
+}
+
+div {
+    display: block;
+}
+
+#container.inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blue {
+    color: black;
+    font-weight: 500;
+    float: left;
+    margin-right: 5px;
+}
+
+#cont1 .list li a .title {
+    width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    float: left;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+#cont1 .list li a .date {
+    float: right;
+    font-size: 1rem;
+    color: #aaa;
+    width: 100px;
+}
+
+#email {
+    background: #f6f6f6;
+    padding: 30px 0;
+}
+
+#email .inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#email .jkh {
+    margin-right: 50px;
+}
+
+#email .galaxis {
+    display: block;
+    padding: 18px 80px;
+    background-color: #fff;
+    width: 180px;
+    text-align: right;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.cf::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    unicode-bidi: isolate;
+}
+
+#cont1 .list li a {
+    display: block;
+    padding: 30px 25px;
+    font-size: 1.125rem;
+}
+
+#email a {
+    font-size: 1.125rem;
+}
+
+#email .galaxis .ico {
+    display: inline-block;
+    text-indent: -9999px;
+    background: url(../img/message_ico.svg) no-repeat center / 50px;
+    margin-right: 10px;
+}
+
+#footer {
+    height: 650px;
+    background: #191f28;
+}
+
+#footerIn {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 100px;
+    position: relative;
+}
+
+.flogo {
+    display: block;
+    width: 175px;
+    height: 50px;
+    background: url(../img/logo_white.svg) no-repeat center / 180px;
+    text-indent: -9999px;
+    margin-bottom: 45px;
+}
+
+.finfo li {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 300;
+    float: left;
+    margin: 0 30px 10px 0;
+}
+
+.jkh {
+    display: inline-block;
+    text-align: right;
+    margin-right: 20px; /* 두 요소 사이 여백 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 파란색 대신 검정색으로 설정 */
+}
+
+#footer {
+    background-color: #f8f9fa; /* 배경색 설정 */
+    padding: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#footerIn {
+    max-width: 600px; /* footer 내부 폭 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.flogo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.finfo {
+    list-style: none; /* 기본 목록 점 제거 */
+    padding: 0;
+}
+
+.finfo li {
+    margin-bottom: 15px; /* 항목 간 간격 */
+}
+
+.finfo strong {
+    display: inline-block;
+    width: 100px; /* 제목 너비 고정으로 일관성 유지 */
+    color: #333;
+    font-weight: bold;
+}
+
+.finfo span {
+    color: #555;
+}
+
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons .icon {
+    margin-left: 10px; /* 각 아이콘 사이 간격 */
+    color: #555;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons .icon:hover {
+    color: #007bff; /* 호버 시 색상 변경 */
+}
+
+.social-icons .youtube {
+    color: #FF0000;
+}
+
+.social-icons .facebook {
+    color: #4267B2;
+}
+
+.social-icons .instagram {
+    color: #C13584;
+}
+
+.social-icons .naver {
+    color: #03C75A;
+}
+
+.idder {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
