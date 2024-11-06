@@ -13,6 +13,22 @@ function toggleTimeSelection() {
     reservationModal.style.display = reservationModal.style.display === "none" ? "block" : "none";
     confirmationMessage.style.display = "none";
     renderCalendar();
+    renderTimeSlots();
+}
+
+function renderTimeSlots() {
+    document.querySelectorAll(".time-slots button").forEach(button => {
+        const time = button.textContent;
+        
+        
+        if (reservedSlots[selectedDate] && reservedSlots[selectedDate].includes(time)) {
+            button.classList.add("reserved"); 
+            button.disabled = true; 
+        } else {
+            button.classList.remove("reserved");
+            button.disabled = false;
+        }
+    });
 }
 
 function renderCalendar() {
