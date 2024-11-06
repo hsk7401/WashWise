@@ -8,10 +8,10 @@ function initMap() {
     const map = new kakao.maps.Map(container, options);
     const places = new kakao.maps.services.Places();
 
-    // 세차장 검색 및 초기화
+   
     places.keywordSearch('세차장', (result, status) => {
         if (status === kakao.maps.services.Status.OK) {
-            // 예약 가능 여부 추가
+           
             result = result.map((carWash, index) => ({
                 ...carWash,
                 availableSlots: index < 4 ? 0 : Math.floor(Math.random() * 6) + 1
@@ -28,7 +28,7 @@ function initMap() {
 }
 
 function displayCarWashMarkers(carWashList, map) {
-    let activeInfoWindow = null; // 현재 열린 인포윈도우를 추적하는 변수
+    let activeInfoWindow = null; 
 
     carWashList.forEach(carWash => {
         const markerPosition = new kakao.maps.LatLng(carWash.y, carWash.x);
@@ -103,5 +103,5 @@ function updateRecommendedList(carWashList, map) {
     });
 }
 
-// DOM 로드 시 지도 초기화
+
 document.addEventListener("DOMContentLoaded", initMap);
