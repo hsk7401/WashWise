@@ -1,38 +1,31 @@
+/* 기본 스타일 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #f5f8fa;
     color: #333;
 }
 
-.header {
-    padding: 1rem;
-    background-color: #007bff;
+/* 헤더 스타일 */
+header {
+    background-color: #0074D9;
+    color: white;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    color: #fff;
 }
 
-.title h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* 상단 검색 */
 .header-content {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 100%;
-    max-width: 800px;
+    margin-bottom: 15px; /* 검색창과 아래 헤더 요소의 간격 */
 }
 
 .search-bar {
@@ -59,6 +52,56 @@ body {
     color: #fff;
 }
 
+/* 내비게이션 스타일 */
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffcc00;
+}
+
+/* 드롭다운 스타일 */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #0074D9;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.services:hover .dropdown,
+.customer-support:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.dropdown li a:hover {
+    color: #ffcc00;
+}
+
+/* 메인 컨테이너 */
 .container {
     display: flex;
     flex-direction: row;
@@ -66,7 +109,7 @@ body {
     padding: 2rem;
 }
 
-
+/* 지도 섹션 */
 .map-section {
     flex: 2;
     height: 600px;
@@ -76,7 +119,7 @@ body {
     overflow: hidden;
 }
 
-
+/* 추천 세차장 리스트 */
 .recommend-section {
     flex: 1;
     background-color: #fff;
@@ -112,9 +155,9 @@ body {
     font-size: 0.9rem;
 }
 
+/* 예약 버튼 상태별 스타일 */
 .reserve-button {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -123,10 +166,47 @@ body {
     transition: background-color 0.3s;
 }
 
-.reserve-button:hover {
-    background-color: #0056b3;
+.reserve-button.available {
+    background-color: #28a745; /* 초록색: 예약 가능 */
 }
 
+.reserve-button.unavailable {
+    background-color: #dc3545; /* 빨간색: 예약 불가 */
+}
+
+.reserve-button:hover {
+    opacity: 0.8;
+}
+
+/* 인포윈도우 스타일 */
+.info-window.available {
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-window.unavailable {
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-address,
+.info-phone,
+.info-slots {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 반응형 스타일 */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -141,117 +221,4 @@ body {
         width: 100%;
         margin-top: 20px;
     }
-}
-
-.info-window.available {
-    background-color: #d4edda; 
-}
-
-.info-window.unavailable {
-    background-color: #f8d7da; 
-}
-.map-section {
-    flex: 1;
-    height: calc(100vh - 200px); 
-    background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* 인포윈도우 스타일 */
-.info-window {
-    padding: 10px;
-    font-size: 14px;
-}
-
-.info-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.info-address {
-    color: #666;
-}
-
-.info-phone {
-    color: #666;
-}
-
-
-.recommend-item {
-    padding: 10px;
-    border-bottom: 1px solid #eaeaea;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.recommend-item:hover {
-    background-color: #f5f5f5;
-}
-
-.item-info {
-    margin-bottom: 5px;
-}
-
-.item-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.item-address,
-.item-phone {
-    font-size: 14px;
-    color: #333;
-}
-
-.reserve-button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.reserve-button:hover {
-    background-color: #0056b3;
-}
-
-.reserve-button.available {
-    background-color: #28a745; 
-    color: #fff;
-}
-
-.reserve-button.unavailable {
-    background-color: #dc3545; 
-    color: #fff;
-}
-
-
-.info-window.available {
-    background-color: #d4edda; 
-    border: 1px solid #28a745;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.info-window.unavailable {
-    background-color: #f8d7da; 
-    border: 1px solid #dc3545;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-
-.info-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.info-address, .info-phone, .info-slots {
-    font-size: 14px;
-    color: #666;
 }
