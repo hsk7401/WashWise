@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ body {
     background-color: #f5f8fa;
     color: #333;
 }
-
 
 header {
     background-color: #0074D9;
@@ -25,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .search-bar {
@@ -34,10 +32,9 @@ header {
     font-size: 1rem;
     border: 2px solid #0056b3;
     border-radius: 5px;
-    width: 80%; 
-    max-width: 500px; 
+    width: 80%;
+    max-width: 500px;
 }
-
 
 .search-button {
     padding: 0.5rem 1rem;
@@ -76,7 +73,6 @@ header {
     color: #ffcc00;
 }
 
-
 .dropdown {
     display: none;
     position: absolute;
@@ -84,7 +80,7 @@ header {
     list-style: none;
     padding: 10px 0;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 1000;
     white-space: nowrap;
 }
 
@@ -110,16 +106,14 @@ header {
     padding: 2rem;
 }
 
-
 .map-section {
     flex: 2;
-    height: 600px;
+    height: 1500px; /* 지도 세로 크기 */
     background-color: #ddd;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
-
 
 .recommend-section {
     flex: 1;
@@ -167,17 +161,16 @@ header {
 }
 
 .reserve-button.available {
-    background-color: #28a745; 
+    background-color: #28a745;
 }
 
 .reserve-button.unavailable {
-    background-color: #dc3545; 
+    background-color: #dc3545;
 }
 
 .reserve-button:hover {
     opacity: 0.8;
 }
-
 
 .info-window.available {
     background-color: #d4edda;
@@ -220,4 +213,16 @@ header {
         width: 100%;
         margin-top: 20px;
     }
+}
+
+.recommend-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    
+    max-height: 1200px; 
+    overflow-y: auto;
 }
